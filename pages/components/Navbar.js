@@ -11,63 +11,61 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar(){
 
+  const [dropdown, setDropdown] = useState(false);
+const onMouseEnter = () => {
+  setDropdown(true)
+  };
 
-    const [click,setClick] = useState(false);
-    const [dropdown,setDropdown] = useState(true);
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu=()=>setClick(false)
-
-
-
-    return(<>
-    <div className={styles.prt}>
+  const onMouseLeave = () => {
+ 
+      setDropdown(false);
+  
+  };
+    return(<div className={styles.prt}>
         <nav className={styles.navbar}>
-        <Link href='/' className={styles.navbar_logo}>
-            EPIC
-        </Link>
-
-
-        <div className={styles.menu_icon} onClick={handleClick}>
-          {click?<FontAwesomeIcon icon={faTimes} />:<FontAwesomeIcon icon={faBars}/>}
-        </div>
-
-
-        <ul className={click ?`${styles.nav_menu} ${styles.active}`:`${styles.nav_menu}`}>
-
-        <li className={styles.nav_item}>
-            <Link href='/' className={styles.nav_link}  onClick={closeMobileMenu}>
-             Home            
+            <Link href='/'
+     
+            >
+                <div className={styles.navbar_logo}>
+                NFTLAND
+                </div>
+            
             </Link>
-        </li>
 
+            <ul className={styles.nav_menu}
+                           
 
-        <li className={styles.nav_item}>          
-          <Link href='/' className={styles.nav_link}  onClick={closeMobileMenu}>
-           <>  Services <FontAwesomeIcon icon={faCaretDown} />        
-            </></Link>
-            {dropdown && <Dropdown/>}
-        </li>
+            >
+                 <li className={styles.nav_items}
+               onMouseEnter={onMouseEnter}
+               onMouseLeave={onMouseLeave}
+                 >
+                            { dropdown &&  <Dropdown/>}
+                      <Link href='/'>
+                        Explore
+                    </Link>
 
+         
 
-        <li className={styles.nav_item}>
-            <Link href='/' className={styles.nav_link}  onClick={closeMobileMenu}>
-             Contact Us            
-            </Link>
-        </li>
+                </li>
+                <li className={styles.nav_items}>
+                       <Link href='/'>
+                        Launch Collection
+                    </Link>
+                    </li>
+                <li className={styles.nav_items}>
+                 <Link href='/'>
+                    Create NFT
+                    </Link>
+                </li>
+               
+            </ul>
 
-        <li className={styles.nav_item}>
-            <Link href='/' className={styles.nav_link}  onClick={closeMobileMenu}>
-             Sign Up        
-            </Link>
-        </li>
-        </ul>
-
-<Button/>
-
+            <button>Connect wallet</button>
 
         </nav>
-        </div>
-    </>)
+
+    </div>)
 }
 
 export default Navbar

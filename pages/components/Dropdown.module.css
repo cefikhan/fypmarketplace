@@ -1,0 +1,40 @@
+.prt {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 70px;
+    transform: translateX(-20px);
+    background-color: rebeccapurple;
+
+}
+
+.dropdown_menu {
+    background: red;
+    width: 100px;
+    list-style: none;
+    text-align: center;
+
+}
+
+.clicked {
+    display: none;
+}
+
+.dropdown_menu li {
+    background: #1888ff;
+    cursor: pointer;
+}
+
+.dropdown_menu li:hover {
+    background: #5cabff;
+}
+
+.dropdown_link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}

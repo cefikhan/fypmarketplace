@@ -3,3 +3,42 @@
     margin: 0px;
     padding: 0px;
 }
+
+.navbar {
+    height: 80px;
+    background-color: #2e2110;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navbar_logo {
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.nav_menu {
+    width: 60vw;
+}
+
+.navbar>ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+
+    text-align: center;
+
+}
+
+
+.nav_items {
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+}

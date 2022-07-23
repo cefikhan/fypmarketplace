@@ -12,28 +12,36 @@ function Dropdown(){
 
     const [click,setClick] = useState(false);
     const handleClick = ()=> setClick(!click);
-    return<div className={styles.prt}>
-
-        <ul onClick={handleClick} 
-        className={click? `${styles.dropdown_menu} ${styles.clicked}`:`${styles.dropdown_menu}`}
+    return(<div className={styles.prt}>
+        <ul className={click?`${styles.dropdown_menu} ${styles.clicked}`:`${styles.dropdown_menu}`}
+        onClick={handleClick}
         >
-{MenuItems.map((item,index)=>{
-    return(<li key={index}>
-
-<Link className={item.cName} href={item.path}
-onClick = {()=>setClick(false)}
->{item.title}</Link>
-
-    </li>)
-})}
-
-
+            <li>
+                <Link href='/' >
+                    <div className={styles.dropdown_link}   >
+                        Buy NFT
+                    </div>
+                </Link>
+            </li>
+            
+                <li>
+                    <Link href='/'>
+                        <div className={styles.dropdown_link}>
+                                Collection
+                        </div>
+                     </Link>
+                </li>
+                
+                <li><Link href='/'>
+                
+                      <div className={styles.dropdown_link}   >
+                        My NFT
+                    </div>
+                    </Link>
+                </li>
         </ul>
 
-
-
-
-    </div>
+    </div>)
 }
 
 export default Dropdown;
