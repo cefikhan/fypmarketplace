@@ -1,0 +1,27 @@
+.prt {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+
+
+    color: #fff;
+    background-color: #1888ff;
+
+}
+
+.btn:hover {
+    padding: 6px 18px;
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    border-radius: 4px;
+    color: black;
+    border: 2px sold #1888ff;
+}
