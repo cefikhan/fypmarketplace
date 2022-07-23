@@ -4,24 +4,23 @@
     padding: 0px;
 }
 
-
 .btn {
     padding: 8px 20px;
     border-radius: 4px;
-    cursor: pointer;
+    outline: none;
+    border: none;
     font-size: 18px;
-
-
     color: #fff;
-    background-color: #1888ff;
-
+    cursor: pointer;
+    background-color: var(--primary);
 }
 
 .btn:hover {
     padding: 6px 18px;
     transition: all 0.3s ease-out;
     background-color: transparent;
+    color: #fff;
     border-radius: 4px;
-    color: black;
-    border: 2px sold #1888ff;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease-out;
 }
