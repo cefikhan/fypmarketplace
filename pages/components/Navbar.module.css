@@ -1,5 +1,6 @@
 .prt {
     box-sizing: border-box;
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
 }
@@ -11,11 +12,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0px 5%;
 
 }
 
 .navbar_logo {
     font-size: 2rem;
+    font-family: "Bungee", cursive;
     cursor: pointer;
 
 }
@@ -41,4 +44,29 @@
     height: 100%;
     align-self: center;
     justify-content: center;
+}
+
+.btn_main {
+    display: block;
+
+    width: max-content;
+    text-align: center;
+    color: #fff;
+    background: rgb(201, 38, 193);
+    border-radius: 0;
+    letter-spacing: normal;
+    outline: 0;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 8px 40px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 900ms ease;
+}
+
+.btn_main:hover {
+    background-color: wheat;
+    color: black;
+    padding: 12px 50px;
 }

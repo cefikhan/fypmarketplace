@@ -23,11 +23,13 @@
 
 .dropdown_menu li {
     background: #1888ff;
+    background-color: rebeccapurple;
     cursor: pointer;
 }
 
 .dropdown_menu li:hover {
     background: #5cabff;
+    background-color: rgb(210, 169, 250);
 }
 
 .dropdown_link {

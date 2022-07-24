@@ -61,7 +61,7 @@ const onMouseEnter = () => {
                
             </ul>
 
-            <button>Connect wallet</button>
+            <button className={styles.btn_main}>Connect wallet</button>
 
         </nav>
 

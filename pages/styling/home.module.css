@@ -1,0 +1,11 @@
+.homepg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.right_panel {
+    /* position: absolute; */
+    /* right: 0px; */
+    width: 50%;
+}
