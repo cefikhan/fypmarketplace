@@ -2,9 +2,11 @@ import React from 'react'
 import styles from "./styling/home.module.css"
 import Intro from './components/Intro'
 import Slider from "./slider/Slider"
+import Cards from "./components/Card"
+import Car from "./components/Carousel"
 function homepage() {
   return (
-    <div>
+    <div className={styles.prt}>
 
       <div className={styles.homepg}>
         <div className={styles.intro}>
@@ -15,6 +17,16 @@ function homepage() {
          </div>
       </div>
 
+
+<div className={styles.cards}>
+
+  <Cards/>
+</div>
+
+
+<div>
+  <Car/>
+</div>
     </div>
   )
 }

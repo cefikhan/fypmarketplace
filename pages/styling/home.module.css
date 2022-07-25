@@ -1,7 +1,13 @@
+.prt {
+    background-color: #694518;
+    color: white;
+}
+
 .homepg {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 .right_panel {

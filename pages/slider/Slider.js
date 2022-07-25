@@ -38,7 +38,8 @@ export default function Slider() {
                     className={slideIndex === index + 1 ? `${styles.slide} ${styles.active_anim}` : `${styles.slide}`}
                     >
                         <img 
-                        src={`/Imgs/img${index + 1}.jpg`} 
+                        src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        title="Simple Risotto" 
                         />
                     </div>
                 )
