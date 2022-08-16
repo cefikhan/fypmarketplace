@@ -1,14 +1,21 @@
 import {useState } from 'react'
 import {ethers } from 'ethers'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
+// import { create as ipfsHttpClient } from 'ipfs-http-client'
+import { create } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
+// const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
 import {
     nftaddress,nftmarketaddress
 } from '../config';
+
+import {
+    projectId,
+    projectSecret
+} from "../config";
+
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json';
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json';
 import { EtherscanProvider } from '@ethersproject/providers'
@@ -20,8 +27,32 @@ export default function CreateItem() {
     const [formInput, updateFormInput] = useState({price: '', name: '', description:''})
     const router = useRouter();
 
+
+
+            const projectIdAndSecret = `${projectId}:${projectSecret}`
+
+    const client = create({
+             host: 'ipfs.infura.io',
+             port: 5001,
+             protocol: 'https',
+              headers: {
+                    authorization: `Basic ${Buffer.from(projectIdAndSecret).toString(
+                    'base64'
+                )}`,
+            },
+        })
+
+
+
+
+
+
     async function onChange(e) {
         const file = e.target.files[0]
+
+
+
+
         try{ //try uploading the file
             const added = await client.add(
                 file,
@@ -30,8 +61,10 @@ export default function CreateItem() {
                 }
             )
             //file saved in the url path below
-            const url = `https://ipfs.infura.io/ipfs/${added.path}`
+            const url = `https://marketplace123.infura-ipfs.io/ipfs/${added.path}`
             setFileUrl(url)
+            
+
         }catch(e){
             console.log('Error uploading file: ', e)
         }
@@ -43,6 +76,7 @@ export default function CreateItem() {
         
         //form validation
         if(!name || !description || !price || !fileUrl) {
+            console.log("no name desc prive or url")
             return
         }
 
@@ -52,7 +86,7 @@ export default function CreateItem() {
 
         try{
             const added = await client.add(data)
-            const url = `https://ipfs.infura.io/ipfs/${added.path}`
+          const url = `https://marketplace123.infura-ipfs.io/ipfs/${added.path}`
             //pass the url to sav eit on Polygon adter it has been uploaded to IPFS
             createSale(url)
         }catch(error){
@@ -101,7 +135,7 @@ export default function CreateItem() {
     }
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center" style={{marginTop:"5%"}}>
             <div className="w-1/2 flex flex-col pb-12">
                 <input 
                     placeholder="Asset Name"

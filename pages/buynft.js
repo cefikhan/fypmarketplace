@@ -18,7 +18,8 @@ export default function Home() {
   async function loadNFTs(){
     // const provider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.infura.io/v3/4fa55521d0f647f28c1a179e85f454da");
     // const provider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.infura.io/v3/187f77dc14dd4f0c8f0224ef0c7d6158");
-const provider = new ethers.providers.JsonRpcProvider()
+const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/")
+
         const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, provider);
 
@@ -81,8 +82,9 @@ const provider = new ethers.providers.JsonRpcProvider()
               <img
                   src={nft.image}
                   alt="Picture of the author"
+style={{height:"374px",width:"374px"}}
                   width="500"
-                  // height={500}
+                   height="500"
                   // blurDataURL="data:..." automatically provided
                   // placeholder="blur" // Optional blur-up while loading
                 />

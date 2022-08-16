@@ -17,7 +17,7 @@ function Dropdown(){
         onClick={handleClick}
         >
             <li>
-                <Link href='/' >
+                <Link href='/buynft' >
                     <div className={styles.dropdown_link}   >
                         Buy NFT
                     </div>
@@ -25,17 +25,33 @@ function Dropdown(){
             </li>
             
                 <li>
-                    <Link href='/'>
+                    <Link href='/view-collection'>
                         <div className={styles.dropdown_link}>
                                 Collection
                         </div>
                      </Link>
                 </li>
                 
-                <li><Link href='/'>
+                <li><Link href='/my-assets'>
                 
                       <div className={styles.dropdown_link}   >
                         My NFT
+                    </div>
+                    </Link>
+                </li>
+                   <li><Link href='/creator-dashboard'>
+                
+                      <div className={styles.dropdown_link}   >
+                     Dashboard
+                    </div>
+                    </Link>
+                </li>
+
+
+                <li>
+                    <Link href='/update-col'>
+                      <div className={styles.dropdown_link}   >
+                     Update Collection
                     </div>
                     </Link>
                 </li>

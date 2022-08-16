@@ -37,7 +37,7 @@ async function createItem(){
 }
 
         return (
-        <div className="flex justify-center">
+        <div className="flex justify-center" style={{marginTop:"5%"}} >
             <div className="w-1/2 flex flex-col pb-12">
                 <input 
                     placeholder="Collection Name"

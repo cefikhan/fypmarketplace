@@ -20,18 +20,18 @@ function Intro() {
 <div className={styles.listing}>
 
     <div>
-    <h3>329</h3>
+    <h3>Unique</h3>
     <h5>Collectibles</h5>
     </div>
 
 <div>
-    <h3>27k</h3>
-    <h5>Auctions</h5>
+    <h3>Create</h3>
+    <h5>nfts</h5>
 </div>
 
 <div>
-    <h3>4k</h3>
-    <h5>NFT ARTISTS</h5>
+    <h3>Show</h3>
+    <h5>Creativity</h5>
 </div>
 
 </div>

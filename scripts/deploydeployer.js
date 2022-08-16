@@ -15,3 +15,4 @@ main().then(()=>process.exit(1)).catch((error)=>{
     console.log("error is ",error);
     process.exit(1);
 })
+

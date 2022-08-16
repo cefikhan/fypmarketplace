@@ -4,6 +4,7 @@ import Intro from './components/Intro'
 import Slider from "./slider/Slider"
 import Cards from "./components/Card"
 import Car from "./components/Carousel"
+import Footer from "./components/Footer"
 function homepage() {
   return (
     <div className={styles.prt}>
@@ -24,8 +25,12 @@ function homepage() {
 </div>
 
 
-<div>
+<div className={styles.car}>
   <Car/>
+</div>
+
+<div className={styles.foter}>
+  <Footer/>
 </div>
     </div>
   )
