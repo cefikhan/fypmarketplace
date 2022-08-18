@@ -1,7 +1,6 @@
 import React from "react";
 import {useEffect, useState } from 'react'
 import {ethers } from 'ethers'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 import axios from 'axios'
@@ -10,9 +9,6 @@ import Link from "next/link";
 import Carousel from "react-elastic-carousel";
 import styles from "./carousel.module.css";
 
-
-
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 import {
     nftmarketaddress
 } from '../../config';
